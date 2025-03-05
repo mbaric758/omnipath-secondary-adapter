@@ -11,7 +11,7 @@ source:
     # preferred_id: uniprot
     input_label: source
     properties:
-        source_genesymbol: str
+        genesymbol: str
         ncbi_tax_id_source: int
         entity_type_source: str
 
@@ -21,9 +21,18 @@ target:
     # preferred_id: doid
     input_label: target
     properties:
-        target_genesymbol: str
-        ncbi_tax_id_target: int
-        entity_type_target: str
+        genesymbol: str
+        ncbi_tax_id: int
+        entity_type: str
+
+protein:
+    represented_as: node
+    # preferred_id: uniprot
+    input_label: protein
+    properties:
+        genesymbol: str
+        ncbi_tax_id: int
+        entity_type: str
 
 #--------------------  Information about Edges
 protein protein interaction:
